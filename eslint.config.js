@@ -22,9 +22,11 @@ export default defineConfig([
         sourceType: "module",
       },
     },
-    rules: {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
+     rules: {
+      "no-unused-vars": "off", // Bu kuralı tamamen kapatır
+      "react/prop-types": "warn", // Bu kuralı hata yerine uyarı olarak gösterir
+      indent: ["error", 2], // Bu kuralı hata olarak gösterir ve 2 boşluklu girinti bekler
+      "react/react-in-jsx-scope": "off", // React 17+ kullanıyorsanız bu kuralı kapatabilirsiniz
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
     },
   },
